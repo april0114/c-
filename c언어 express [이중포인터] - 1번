@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+void set_proverb(char**q, int n)
+{
+	static char* array[10] =
+	{
+		"A bad shearer never had a good sickle",
+		"A bad workman quarrels with his tools",
+		" A bad thing never dies",
+		"4th  proverb",
+		"5th proverb",
+		"6th proverb",
+		"7th proverb",
+		"8th proverb",
+		"9th proverb",
+		"10th proverb"
+	};
+	printf("%s", array[n]);
+}
+int main(void)
+{
+	char* p;
+	int n;
+	printf("몇번째 속담을 선택하시겠습니까?");
+	scanf("%d", &n);
+	printf("selected proverb = ");
+	set_proverb(&p, n);
+}
