@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include <string.h>
+#define SIZE 100
+union student
+{
+		char number[15];
+		char name[15];
+		char pnumber[15];
+};
+int main(void)
+{
+	union student s;
+
+	strcpy(s.number, "010114 - 5555");
+	printf("%s\n", s.number);
+
+	strcpy(s.name, "하경림");
+	printf("%s\n", s.name);
+
+	strcpy(s.pnumber, "010-4353-0366");
+	printf("%s\n", s.pnumber);
+
+	return 0;
+}
