@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct number
+{
+	int a;
+	int b;
+};
+int main(void)
+{
+	struct number p1,p2;
+	printf("첫번째 복소수를 입력하시오 (a,b) : ");
+	scanf_s("%d  %d", &p1.a, &p1.b);
+
+	printf("두번째 복소수를 입력하시오 (a,b) :  ");
+	scanf_s("%d %d", &p2.a, &p2.b);
+	
+	int x = 0;
+	int y = 0;
+
+	x = p1.a + p2.a;
+	y = p1.b + p2.b;
+
+	printf("%d + %di", x, y);
+	return 0;
+}
