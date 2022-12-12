@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define ROWS 3
+#define COLS 6
+int get_sum(int array[ROWS][COLS], int size);
+int main(void)
+{
+	int array[ROWS][COLS] =
+	{ {10,10,10,10,10,10},
+		{10,10,10,10,10,10},
+		{10,10,10,10,10,10} };
+	int size=0;
+	get_sum(array, size);
+}
+int get_sum(int array[ROWS][COLS], int size)
+{
+	int* p, * endp;
+	int s = 0;
+
+	p = &array[0][0];
+	endp = &array[ROWS-1][COLS - 1];
+
+	while (p <= endp)
+		s += *p++;
+	printf("정수의 합 = %d", s);
+
+	return s;
+}
