@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+struct math
+{
+	int x;
+	int y;
+};
+int main(void)
+{
+	struct math p1, p2;
+	int xdiff, ydiff;
+
+	printf("p1의 좌표를 입력하세요 (x y)");
+	scanf_s("%d %d", &p1.x, &p1.y);
+
+	printf("p2의 좌표를 입력하세요 (x y)");
+	scanf_s("%d %d", &p2.x, &p2.y);
+
+	xdiff = p1.x - p2.x;
+	ydiff = p1.y - p2.y;
+
+	int dist = sqrt(xdiff * xdiff + ydiff * ydiff);
+	printf("두점 사이의 거리 : %d", dist);
+}
